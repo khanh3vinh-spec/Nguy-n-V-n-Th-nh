@@ -42,7 +42,7 @@ const extractImage = (response: any): string => {
 
 export const generateImage = async (params: GenerateParams): Promise<string> => {
   // Use the latest key from process.env which is updated after window.aistudio.openSelectKey()
-  const apiKey = process.env.API_KEY;
+  const apiKey = process.env.GEMINI_API_KEY;
   
   if (!apiKey) {
     throw new Error("API Key not found. Please select an API Key from the welcome screen.");
